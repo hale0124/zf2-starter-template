@@ -1,0 +1,6 @@
+<?php
+/**
+ * Route configuration
+ */
+
+return [];

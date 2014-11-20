@@ -1,0 +1,15 @@
+<?php
+/**
+ * Mail configuration
+ */
+
+return [
+    'mt_mail' => [
+        'transport_options' => [
+            'connection_config' => [
+                'username' => '',
+                'password' => '',
+            ],
+        ],
+    ],
+];

@@ -1,0 +1,2 @@
+<?php echo 'You have received this email because you initiated to reset your password with us. To continue with the process, please click the link below:'; ?><br>
+<?php echo $this->serverUrl($this->url('zfcuser/resetpassword', array('userId' => $this->record->getUser()->getId(), 'token' => $this->record->getRequestKey()))) ?>

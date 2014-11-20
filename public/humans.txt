@@ -1,0 +1,16 @@
+/* TEAM */
+"Person":
+	Phone:
+	Email:
+	Area:
+
+/* THANKS */
+"Person" <email address>
+
+/* SITE */
+Standards: HTML5, CSS3, PSR-4
+Components: jQuery, Normalize.css
+Software: Zend Framework 2
+
+/* NOTE */
+Built by "Person".

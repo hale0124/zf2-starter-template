@@ -1,0 +1,6 @@
+<?php
+/**
+ * AssetManager configuration
+ */
+
+return [];

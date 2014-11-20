@@ -1,0 +1,6 @@
+<?php
+/**
+ * Navigation configuration
+ */
+
+return [];
