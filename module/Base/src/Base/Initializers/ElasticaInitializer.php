@@ -18,7 +18,6 @@ class ElasticaInitializer implements
     public function initialize($service, ServiceLocatorInterface $serviceManager)
     {
         if ($service instanceof ElasticaAwareInterface) {
-            var_dump('Ran');
             $service->setElasticaClient($serviceManager->get('Base\Service\ElasticaClient'));
         }
     }
