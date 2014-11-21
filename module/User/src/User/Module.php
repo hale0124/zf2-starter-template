@@ -33,7 +33,43 @@ class Module implements
         if ($e->getRequest() instanceof HttpRequest) {
             $this->onUserRegistration($e);
             $this->authenticateViaCookie($e);
+            $this->smartRedirectStrategy($e);
+            $this->updateUserLastLogin($e);
         }
+    }
+
+    /**
+     * Update the users last login
+     *
+     * @param EventInterface $e
+     * @param ServiceManager $serviceManager
+     */
+    public function updateUserLastLogin(EventInterface $e)
+    {
+        $serviceManager = $e->getApplication()->getServiceManager();
+
+        $e->getApplication()->getEventManager()->getSharedManager()->attach(
+                'User\Authentication\Storage\Db',
+                'write.post',
+                function ($e) use ($serviceManager) {
+                    $user = $e->getParam('user');
+                    $user->setLastLogin(new \Datetime());
+                    $serviceManager->get('Doctrine\ORM\EntityManager')->flush();
+        });
+    }
+
+    /**
+     * Smart redirect strategy for rbac
+     *
+     * @param EventInterface $e
+     */
+    public function smartRedirectStrategy(EventInterface $e)
+    {
+        $target = $e->getTarget();
+
+        $target->getEventManager()->attach(
+            $target->getServiceManager()->get('User\Rbac\View\Strategy\SmartRedirectStrategy')
+        );
     }
 
     /**

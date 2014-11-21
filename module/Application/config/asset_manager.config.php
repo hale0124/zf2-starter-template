@@ -29,6 +29,33 @@ return [
                     'js/vendor/jquery-1.11.1.min.js',
                     'js/vendor/bootstrap.min.js',
                 ],
+
+                // plugin stylesheets
+                'css/plugins.css' => [
+                    // change these
+                    'css/plugins/humane-themes/original.css',
+                    'css/plugins/pickadate/classic.css',
+                    'css/plugins/pickadate/classic.date.css',
+                    'css/plugins/pickadate/classic.time.css',
+                    'css/plugins/selectize.bootstrap3.css',
+                ],
+
+                // plugin javascript
+                'js/plugins.js' => [
+                    'js/plugins/plugin.config.min.js',
+                    'js/plugins/FileAPI.min.js',
+                    'js/plugins/FileAPI.exif.min.js',
+                    'js/plugins/jquery.fileapi.min.js',
+                    'js/plugins/jquery.jcrop.min.js',
+                    'js/plugins/parsley.remote.min.js',
+                    'js/plugins/parsley.min.js',
+                    'js/plugins/humane.min.js',
+                    'js/plugins/picker.min.js',
+                    'js/plugins/picker.date.min.js',
+                    'js/plugins/picker.time.min.js',
+                    'js/plugins/selectize.min.js',
+                    'js/plugins/spin.min.js',
+                ],
             ],
         ],
 
@@ -51,6 +78,11 @@ return [
             'js/vendor.js' => [
                 [
                     'filter' => 'Assetic\Filter\JsMinFilter',
+                ],
+            ],
+            'css/plugins.css' => [
+                [
+                    'filter' => 'Assetic\Filter\CssMinFilter',
                 ],
             ],
         ],

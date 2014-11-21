@@ -5,6 +5,7 @@ return array(
   'User\Authentication\Adapter\EmailVerification'         => __DIR__.'/src/User/Authentication/Adapter/EmailVerification.php',
   'User\Authentication\Factory\CookieFactory'             => __DIR__.'/src/User/Authentication/Factory/CookieFactory.php',
   'User\Authentication\Factory\EmailVerificationFactory'  => __DIR__.'/src/User/Authentication/Factory/EmailVerificationFactory.php',
+  'User\Authentication\Storage\Db'                        => __DIR__.'/src/User/Authentication/Storage/Db.php',
   'User\Controller\Factory\PasswordControllerFactory'     => __DIR__.'/src/User/Controller/Factory/PasswordControllerFactory.php',
   'User\Controller\Factory\RegistrationControllerFactory' => __DIR__.'/src/User/Controller/Factory/RegistrationControllerFactory.php',
   'User\Controller\PasswordController'                    => __DIR__.'/src/User/Controller/PasswordController.php',

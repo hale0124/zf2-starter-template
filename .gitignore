@@ -16,5 +16,6 @@ nbdist
 nbproject
 vendor
 !public/js/vendor
+!module/Application/assets/js/vendor
 nbactions.xml
 nb-configuration.xml

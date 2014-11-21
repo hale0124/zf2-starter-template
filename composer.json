@@ -21,6 +21,7 @@
         "natxet/CssMin": ">=1.0.0",
         "neilime/zf2-twb-bundle": "2.*@stable",
         "phpunit/phpunit": ">=3.7.0",
+        "ruflin/elastica": ">=1.0.0",
         "rwoverdijk/assetmanager": ">=1.0.0",
         "zendframework/zend-developer-tools": "*",
         "zendframework/zendframework": ">=2.3.0",

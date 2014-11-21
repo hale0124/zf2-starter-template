@@ -31,4 +31,8 @@ return [
     'aliases' => [
         'Zend\Authentication\AuthenticationService' => 'zfcuser_auth_service',
     ],
+
+    'invokables' => [
+        'ZfcUser\Authentication\Storage\Db' => 'User\Authentication\Storage\Db',
+    ],
 ];
