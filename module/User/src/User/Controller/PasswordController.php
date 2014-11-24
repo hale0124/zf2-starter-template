@@ -6,8 +6,8 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Doctrine\ORM\EntityManager;
 use ZfcUser\Options\ModuleOptions;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Form\ForgotForm;
 use User\Form\ResetForm;
 use User\Password\Options;
@@ -15,8 +15,8 @@ use User\Password\Service\Password;
 
 class PasswordController extends AbstractActionController
 {
-    use EntityManagerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * @var Password

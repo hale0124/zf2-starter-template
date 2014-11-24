@@ -2,6 +2,7 @@
 
 namespace User;
 
+use DateTime;
 use Zend\EventManager\EventInterface;
 use Zend\Http\Request as HttpRequest;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
@@ -34,7 +35,7 @@ class Module implements
             $this->onUserRegistration($e);
             $this->authenticateViaCookie($e);
             $this->smartRedirectStrategy($e);
-            $this->updateUserLastLogin($e);
+            $this->setLastLogin($e);
         }
     }
 
@@ -44,7 +45,7 @@ class Module implements
      * @param EventInterface $e
      * @param ServiceManager $serviceManager
      */
-    public function updateUserLastLogin(EventInterface $e)
+    public function setLastLogin(EventInterface $e)
     {
         $serviceManager = $e->getApplication()->getServiceManager();
 
@@ -53,7 +54,7 @@ class Module implements
                 'write.post',
                 function ($e) use ($serviceManager) {
                     $user = $e->getParam('user');
-                    $user->setLastLogin(new \Datetime());
+                    $user->setLastLogin(new Datetime());
                     $serviceManager->get('Doctrine\ORM\EntityManager')->flush();
         });
     }

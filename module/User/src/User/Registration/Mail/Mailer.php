@@ -3,19 +3,19 @@
 namespace User\Registration\Mail;
 
 use MtMail\Service\Mail as MailService;
-use Base\Interfaces\MailServiceInterface;
-use Base\Traits\MailServiceTrait;
-use Base\Traits\OptionsTrait;
+use Base\Interfaces\MailServiceAwareInterface;
+use Base\Traits\MailServiceAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Registration\Options;
 
 /**
  * Registration mailer
  */
 class Mailer implements
-    MailServiceInterface
+    MailServiceAwareInterface
 {
-    use MailServiceTrait;
-    use OptionsTrait;
+    use MailServiceAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * Constructor

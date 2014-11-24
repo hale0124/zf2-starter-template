@@ -5,10 +5,10 @@ namespace Base\Traits;
 /**
  * Mailer trait
  */
-trait MailerTrait
+trait MailerAwareTrait
 {
     /**
-     * @var MailServiceInterface
+     * @var MailServiceAwareInterface
      */
     protected $mailer;
 
@@ -25,7 +25,7 @@ trait MailerTrait
     /**
      * Set mailer
      *
-     * @param  MailServiceInterface $mailer
+     * @param  MailServiceAwareInterface $mailer
      * @return type
      */
     public function setMailer($mailer)

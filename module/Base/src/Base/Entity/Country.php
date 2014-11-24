@@ -530,19 +530,6 @@ class Country
     }
 
     /**
-     * Set provinces
-     *
-     * @param  ArrayCollection $provinces
-     * @return Country
-     */
-    public function setProvinces(ArrayCollection $provinces)
-    {
-        $this->provinces = $provinces;
-
-        return $this;
-    }
-
-    /**
      * Get cities
      *
      * @return ArrayCollection
@@ -550,18 +537,5 @@ class Country
     public function getCities()
     {
         return $this->cities;
-    }
-
-    /**
-     * Set cities
-     *
-     * @param  ArrayCollection $cities
-     * @return Country
-     */
-    public function setCities(ArrayCollection $cities)
-    {
-        $this->cities = $cities;
-
-        return $this;
     }
 }

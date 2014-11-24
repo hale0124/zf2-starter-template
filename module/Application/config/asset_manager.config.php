@@ -26,6 +26,7 @@ return [
 
                 // vendor javascript
                 'js/vendor.js' => [
+                    'js/vendor/modernizr.min.js',
                     'js/vendor/jquery-1.11.1.min.js',
                     'js/vendor/bootstrap.min.js',
                 ],

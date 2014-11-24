@@ -7,8 +7,8 @@ use Zend\Session\Container;
 use Doctrine\ORM\EntityManager;
 use ZfcUser\Authentication\Adapter\AbstractAdapter;
 use ZfcUser\Authentication\Adapter\AdapterChainEvent as AuthEvent;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Cookie\Options;
 use User\Cookie\Service\Cookie as CookieService;
 
@@ -17,8 +17,8 @@ use User\Cookie\Service\Cookie as CookieService;
  */
 class Cookie extends AbstractAdapter
 {
-    use EntityManagerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * @var Cookie

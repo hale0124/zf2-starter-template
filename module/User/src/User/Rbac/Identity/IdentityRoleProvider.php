@@ -5,8 +5,8 @@ namespace User\Rbac\Identity;
 use ZfcRbac\Identity\IdentityInterface;
 use ZfcUser\Entity\UserInterface;
 use Doctrine\ORM\EntityManager;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Rbac\Options;
 
 /**
@@ -15,8 +15,8 @@ use User\Rbac\Options;
 class IdentityRoleProvider implements
     IdentityInterface
 {
-    use EntityManagerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * @var UserInterface

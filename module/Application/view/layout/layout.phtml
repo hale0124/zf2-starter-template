@@ -17,13 +17,12 @@
         ?>
 
         <!-- Le styles -->
-        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+        <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
             ->appendStylesheet($this->basePath() . '/css/vendor.css') 
             ->appendStylesheet($this->basePath() . '/css/plugins.css') ?>
 
         <!-- Scripts -->
-        <?php echo $this->headScript()
-            ->prependFile($this->basePath() . '/js/conditionals.js', 'text/javascript', ['conditional' => 'lt IE 9']) ?>
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/conditionals.js', 'text/javascript', ['conditional' => 'lt IE 9']) ?>
     </head>
     <body>
         <div class="container">
@@ -32,7 +31,6 @@
         
         <!-- Inline Scripts -->
         <?php echo $this->inlineScript()
-            ->appendFile($this->basePath() . '/js/vendor/modernizr.min.js')
             ->appendFile('/js/vendor.js') 
             ->appendFile('/js/plugins.js') ?>
     </body>

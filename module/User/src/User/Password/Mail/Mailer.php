@@ -4,9 +4,9 @@ namespace User\Password\Mail;
 
 use MtMail\Service\Mail as MailService;
 use ZfcUser\Entity\UserInterface;
-use Base\Interfaces\MailServiceInterface;
-use Base\Traits\MailServiceTrait;
-use Base\Traits\OptionsTrait;
+use Base\Interfaces\MailServiceAwareInterface;
+use Base\Traits\MailServiceAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Entity\Password as PasswordEntity;
 use User\Password\Options;
 
@@ -14,10 +14,10 @@ use User\Password\Options;
  * Password mailer
  */
 class Mailer implements
-    MailServiceInterface
+    MailServiceAwareInterface
 {
-    use MailServiceTrait;
-    use OptionsTrait;
+    use MailServiceAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * Constructor

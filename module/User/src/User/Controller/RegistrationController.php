@@ -5,15 +5,15 @@ namespace User\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Doctrine\ORM\EntityManager;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Registration\Options;
 use User\Registration\Service\Registration;
 
 class RegistrationController extends AbstractActionController
 {
-    use EntityManagerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * @var Registration

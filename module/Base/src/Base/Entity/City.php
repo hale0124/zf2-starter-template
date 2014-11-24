@@ -252,19 +252,6 @@ class City
     }
 
     /**
-     * Set country
-     *
-     * @param  Country $country
-     * @return City
-     */
-    public function setCountry(Country $country)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
      * Get province
      *
      * @return Province
@@ -272,18 +259,5 @@ class City
     public function getProvince()
     {
         return $this->province;
-    }
-
-    /**
-     * Set province
-     *
-     * @param  Province $province
-     * @return City
-     */
-    public function setProvince(Province $province)
-    {
-        $this->province = $province;
-
-        return $this;
     }
 }

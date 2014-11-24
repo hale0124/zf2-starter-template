@@ -8,7 +8,7 @@ use User\Entity\User;
 /**
  * Mail service trait
  */
-trait MailServiceTrait
+trait MailServiceAwareTrait
 {
     /**
      * @var MailService
@@ -28,8 +28,8 @@ trait MailServiceTrait
     /**
      * Set mail service
      *
-     * @param  MailService      $mailService
-     * @return MailServiceTrait
+     * @param  MailService           $mailService
+     * @return MailServiceAwareTrait
      */
     public function setMailService(MailService $mailService)
     {

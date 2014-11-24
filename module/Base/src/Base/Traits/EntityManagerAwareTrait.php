@@ -7,7 +7,7 @@ use Doctrine\ORM\EntityManager;
 /**
  * Entity manager trait
  */
-trait EntityManagerTrait
+trait EntityManagerAwareTrait
 {
     /**
      * @var EntityManager
@@ -27,8 +27,8 @@ trait EntityManagerTrait
     /**
      * Set entity manager
      *
-     * @param  EntityManager      $entityManager
-     * @return EntityManagerTrait
+     * @param  EntityManager           $entityManager
+     * @return EntityManagerAwareTrait
      */
     public function setEntityManager(EntityManager $entityManager)
     {

@@ -6,14 +6,14 @@ use Zend\Authentication\Result as AuthenticationResult;
 use Doctrine\ORM\EntityManager;
 use ZfcUser\Authentication\Adapter\AbstractAdapter;
 use ZfcUser\Authentication\Adapter\AdapterChainEvent;
-use Base\Traits\EntityManagerTrait;
+use Base\Traits\EntityManagerAwareTrait;
 
 /**
  * Email verification authentication adapter
  */
 class EmailVerification extends AbstractAdapter
 {
-    use EntityManagerTrait;
+    use EntityManagerAwareTrait;
 
     /**
      * Constructor

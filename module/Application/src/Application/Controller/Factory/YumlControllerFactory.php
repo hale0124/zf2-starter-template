@@ -15,8 +15,8 @@ class YumlControllerFactory implements
      * Fix for the Doctrine 2 Yuml Controller
      * @todo Remove once they fix this
      *
-     * @param  \Zend\ServiceManager\ServiceLocatorInterface $controllers
-     * @return \DoctrineORMModule\Yuml\YumlController
+     * @param  ServiceLocatorInterface  $controllers
+     * @return YumlController
      * @throws ServiceNotFoundException
      */
     public function createService(ServiceLocatorInterface $controllers)
@@ -32,7 +32,7 @@ class YumlControllerFactory implements
         }
 
         return new YumlController(
-            new Client('http://yuml.me/diagram/plain/class/', array('timeout' => 30))
+            new Client('http://yuml.me/diagram/plain/class/', ['timeout' => 30])
         );
     }
 }

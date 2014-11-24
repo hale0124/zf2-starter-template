@@ -7,7 +7,7 @@ use Zend\Stdlib\AbstractOptions;
 /**
  * Mail service trait
  */
-trait OptionsTrait
+trait OptionsAwareTrait
 {
     /**
      * @var AbstractOptions
@@ -27,8 +27,8 @@ trait OptionsTrait
     /**
      * Set options
      *
-     * @param  AbstractOptions $options
-     * @return OptionsTrait
+     * @param  AbstractOptions   $options
+     * @return OptionsAwareTrait
      */
     public function setOptions(AbstractOptions $options)
     {

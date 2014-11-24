@@ -9,10 +9,10 @@ use Doctrine\ORM\EntityManager;
 use ZfcBase\EventManager\EventProvider;
 use ZfcUser\Entity\UserInterface;
 use ZfcUser\Options\ModuleOptions as ZfcUserOptions;
-use Base\Interfaces\MailServiceInterface;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\MailerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Interfaces\MailServiceAwareInterface;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\MailerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Entity\Registration as RegistrationEntity;
 use User\Registration\Options;
 
@@ -21,9 +21,9 @@ use User\Registration\Options;
  */
 class Registration extends EventProvider
 {
-    use EntityManagerTrait;
-    use MailerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use MailerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * @var ZfcUserOptions
@@ -33,14 +33,14 @@ class Registration extends EventProvider
     /**
      * Constructor
      *
-     * @param EntityManager        $entityManager
-     * @param MailServiceInterface $mailer
-     * @param Options              $options
-     * @param ZfcUserOptions       $zfcUserOptions
+     * @param EntityManager             $entityManager
+     * @param MailServiceAwareInterface $mailer
+     * @param Options                   $options
+     * @param ZfcUserOptions            $zfcUserOptions
      */
     public function __construct(
         EntityManager $entityManager,
-        MailServiceInterface $mailer,
+        MailServiceAwareInterface $mailer,
         Options $options,
         ZfcUserOptions $zfcUserOptions
     ) {

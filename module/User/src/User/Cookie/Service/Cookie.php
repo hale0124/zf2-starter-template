@@ -7,8 +7,8 @@ use Zend\Math\Rand;
 use Doctrine\ORM\EntityManager;
 use ZfcBase\EventManager\EventProvider;
 use ZfcUser\Entity\UserInterface;
-use Base\Traits\EntityManagerTrait;
-use Base\Traits\OptionsTrait;
+use Base\Traits\EntityManagerAwareTrait;
+use Base\Traits\OptionsAwareTrait;
 use User\Cookie\Options;
 use User\Entity\Cookie as CookieEntity;
 
@@ -18,8 +18,8 @@ use User\Entity\Cookie as CookieEntity;
 
 class Cookie extends EventProvider
 {
-    use EntityManagerTrait;
-    use OptionsTrait;
+    use EntityManagerAwareTrait;
+    use OptionsAwareTrait;
 
     /**
      * Constructor
