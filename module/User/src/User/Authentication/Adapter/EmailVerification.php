@@ -32,7 +32,8 @@ class EmailVerification extends AbstractAdapter
     {
         if ($e->getIdentity()) {
             $user = $this->getEntityManager()->find('User\Entity\User', $e->getIdentity());
-            $registrationRecord = $this->getEntityManager()->getRepository('User\Entity\Registration')
+            $registrationRecord = $this->getEntityManager()
+                ->getRepository('User\Entity\Registration')
                 ->findOneByUser($user);
 
             if (!$registrationRecord || !$registrationRecord->getResponded()) {

@@ -66,11 +66,6 @@ return [
                     'filter' => 'Assetic\Filter\CssMinFilter',
                 ],
             ],
-            'js/vendor/modernizr.min.js' => [
-                [
-                    'filter' => 'Assetic\Filter\JsMinFilter',
-                ],
-            ],
             'js/conditionals.js' => [
                 [
                     'filter' => 'Assetic\Filter\JsMinFilter',
